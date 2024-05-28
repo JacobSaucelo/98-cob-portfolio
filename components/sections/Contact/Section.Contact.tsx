@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./Section.Contact.module.css";
+import ReusablesPopCard from "@/components/reusables/Reusables.PopCard";
 
 const SectionContact = () => {
   return (
@@ -13,12 +14,13 @@ const SectionContact = () => {
           </div>
         </div>
         <div className="window-body">
-          <p> There are just so many possibilities:</p>
-          <ul>
-            <li>A Task Manager</li>
-            <li>A Notepad</li>
-            <li>Or even a File Explorer!</li>
-          </ul>
+          <Image src="/music1.gif" width={100} height={100} alt="music gif" />
+          <Image
+            src="/clubpenguin.gif"
+            width={100}
+            height={100}
+            alt="music gif"
+          />
         </div>
         <div className="status-bar">
           <p className="status-bar-field">Press w for help</p>
@@ -37,14 +39,14 @@ const SectionContact = () => {
           <div className="window-body">
             <ul className="tree-view">
               <li>
-                <strong>🤙 Socials </strong>
+                <strong className={styles.ChatTitle}>🤙 Socials </strong>
               </li>
               <li>
                 <span className={styles.ChatJacob}>Jacob:</span> Yo!!!
               </li>
               <li>
                 <span className={styles.ChatJacob}>Jacob:</span> Here are my
-                links and socials if you wanna see more of my works.
+                links and socials if you wanna see more of my works!
               </li>
               <li>
                 <span className={styles.ChatJacob}>Jacob:</span>{" "}
@@ -63,13 +65,13 @@ const SectionContact = () => {
                 </button>
                 <button>
                   <div className="status-bar">
-                    <p className="status-bar-field">Github</p>
+                    <p className="status-bar-field">Linked In</p>
                     <p className="status-bar-field">
                       <Image
                         height={12}
                         width={12}
-                        src="/githubIcon.png"
-                        alt="github icon"
+                        src="/linkedInIcon.png"
+                        alt="LinkedIn icon"
                       />
                     </p>
                   </div>
@@ -92,7 +94,13 @@ const SectionContact = () => {
               className={styles.ContactInputMessage}
               readOnly
             />
-            <button>Send</button>
+            <ReusablesPopCard
+              buttonTitle="Send"
+              title="Network Error..."
+              content="Network Error ⚠️ Unable to send message at this time."
+              defaultValue={true}
+            />
+            {/* <button>Send</button> */}
           </article>
         </div>
       </div>

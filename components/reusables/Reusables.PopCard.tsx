@@ -4,12 +4,19 @@ import React, { useState } from "react";
 import styles from "./Reusables.PopCard.module.css";
 
 interface ReusablesPopCardType {
+  buttonTitle?: String;
   title?: String;
   content?: String;
+  defaultValue: boolean;
 }
 
-const ReusablesPopCard = ({ title, content }: ReusablesPopCardType) => {
-  const [toggle, setToggle] = useState<boolean>(true);
+const ReusablesPopCard = ({
+  buttonTitle,
+  title,
+  content,
+  defaultValue,
+}: ReusablesPopCardType) => {
+  const [toggle, setToggle] = useState<boolean>(defaultValue);
   const [shake, setShake] = useState<boolean>(false);
 
   const handleToggle = () => setToggle(!toggle);
@@ -22,7 +29,7 @@ const ReusablesPopCard = ({ title, content }: ReusablesPopCardType) => {
 
   return (
     <section className={styles.PopCardContainer} onClick={handleShake}>
-      <button onClick={handleToggle}>Toggle</button>
+      <button onClick={handleToggle}>{buttonTitle}</button>
 
       {toggle && (
         <article className={styles.PopUpWindowContainer}>

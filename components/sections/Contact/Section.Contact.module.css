@@ -14,6 +14,9 @@
   font-family: "Pixelated MS Sans Serif";
 }
 
+.ChatTitle {
+  font-size: calc(0.5rem + 1vh);
+}
 .ChatJacob {
   color: blue;
 }
