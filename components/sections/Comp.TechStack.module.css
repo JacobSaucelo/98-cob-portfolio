@@ -1,0 +1,8 @@
+.TechStackItem {
+  font-size: calc(0.5rem + 1vh);
+  font-weight: 600;
+}
+.TechStackLiHeader {
+  font-weight: 600;
+  color: blue;
+}

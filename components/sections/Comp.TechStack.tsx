@@ -1,49 +1,45 @@
 import React from "react";
+import {
+  DataFrontEnd,
+  DataBackEnd,
+  DataDatabases,
+} from "@/data/Data.TechStack";
+import styles from "./Comp.TechStack.module.css";
 
 const CompTechStack = () => {
   return (
     <ul className="tree-view">
-      <li>Table of Contents</li>
-      <li>What is web development?</li>
-      <li>
-        CSS
-        <ul>
-          <li>Selectors</li>
-          <li>Specificity</li>
-          <li>Properties</li>
-        </ul>
-      </li>
+      <li className={styles.TechStackItem}>Table of Contents</li>
       <li>
         <details open>
-          <summary>JavaScript</summary>
+          <summary className={styles.TechStackLiHeader}>Front End 🖥️</summary>
           <ul>
-            <li>Avoid at all costs</li>
-            <li>
-              <details>
-                <summary>Unless</summary>
-                <ul>
-                  <li>Avoid</li>
-                  <li>
-                    <details>
-                      <summary>At</summary>
-                      <ul>
-                        <li>Avoid</li>
-                        <li>At</li>
-                        <li>All</li>
-                        <li>Cost</li>
-                      </ul>
-                    </details>
-                  </li>
-                  <li>All</li>
-                  <li>Cost</li>
-                </ul>
-              </details>
-            </li>
+            {DataFrontEnd.map((stack) => (
+              <li key={stack.name}>{stack.content}</li>
+            ))}
           </ul>
         </details>
       </li>
-      <li>HTML</li>
-      <li>Special Thanks</li>
+      <li>
+        <details open>
+          <summary className={styles.TechStackLiHeader}>Back End 🛠️</summary>
+          <ul>
+            {DataBackEnd.map((stack) => (
+              <li key={stack.name}>{stack.content}</li>
+            ))}
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details open>
+          <summary className={styles.TechStackLiHeader}>Database 🗃️</summary>
+          <ul>
+            {DataDatabases.map((stack) => (
+              <li key={stack.name}>{stack.content}</li>
+            ))}
+          </ul>
+        </details>
+      </li>
     </ul>
   );
 };
