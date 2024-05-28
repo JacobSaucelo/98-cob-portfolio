@@ -1,6 +1,13 @@
 .CompAboutContainer {
   /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   grid-column: 1 / span 2;
+}
+
+.AboutDetailsText {
+  font-size: calc(0.4rem + 1vh);
 }
 
 @media screen and (min-width: 500px) {

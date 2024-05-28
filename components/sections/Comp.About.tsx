@@ -7,11 +7,15 @@ const CompAbout = () => {
         <div className="title-bar-text">Skills - My Web Dev Stack</div>
       </div>
       <div className="window-body">
-        <p> There are just so many possibilities:</p>
+        <p className={styles.AboutDetailsText}>
+          I currently use VueJs & Asp.Net(Core/Non-Core) as my tech stack for my
+          current work but but im comfortable on exploring other frontend
+          libraries or frameworks based on what the project needs.
+        </p>
         <ul>
-          <li>A Task Manager</li>
-          <li>A Notepad</li>
-          <li>Or even a File Explorer!</li>
+          <li>Front End</li>
+          <li>Back End</li>
+          <li>& Database!</li>
         </ul>
       </div>
       <div className="status-bar">

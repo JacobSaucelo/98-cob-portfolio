@@ -36,6 +36,11 @@ export const DataFrontEnd = [
     content: "Reactjs",
   },
   {
+    imgPath: "/logos/reactjs.png",
+    name: "Vuejs logo",
+    content: "Vuejs",
+  },
+  {
     imgPath: "/logos/styledComponents.png",
     name: "Styled-Components logo",
     content: "Styled-Components",
