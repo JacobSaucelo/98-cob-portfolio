@@ -7,10 +7,10 @@ import ReusablesPopCard from "@/components/reusables/Reusables.PopCard";
 export default function Home() {
   return (
     <main className={styles.HomePageContainer}>
-      <ReusablesPopCard />
-      {/* <EssentialsNavbar />
+      {/* <ReusablesPopCard /> */}
+      <EssentialsNavbar />
       <SectionTechStack />
-      <SectionExperience /> */}
+      <SectionExperience />
     </main>
   );
 }

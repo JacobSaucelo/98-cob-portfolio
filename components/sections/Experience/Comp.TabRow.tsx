@@ -1,7 +1,12 @@
 import React from "react";
 import styles from "./Comp.TabRow.module.css";
+import { DataWorkExpTypes } from "@/data/Data.WorkExperience";
 
-const CompTabRow = () => {
+interface CompTabRowType {
+  data: DataWorkExpTypes;
+}
+
+const CompTabRow = ({ data }: CompTabRowType) => {
   return (
     <article className={styles.CompTabRowContainer}>
       <aside className={styles.DateDetails}>

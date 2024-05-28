@@ -3,6 +3,7 @@
 import { useState } from "react";
 import CompTabItem from "./Comp.TabItem";
 import styles from "./Comp.Tabs.module.css";
+import { DataWorkExperience, DataEducation } from "@/data/Data.WorkExperience";
 
 const CompTabs = () => {
   const [data, setData] = useState([
@@ -10,15 +11,17 @@ const CompTabs = () => {
       id: 1,
       isSelected: true,
       value: "💎 Experience",
+      data: DataWorkExperience,
     },
     {
       id: 2,
       isSelected: false,
       value: "🎓 Education",
+      data: DataEducation,
     },
   ]);
 
-  const handleSelected = (currentId) => {
+  const handleSelected = (currentId: Number) => {
     const updatedData = data.map((tab) => {
       if (tab.id == currentId) {
         return { ...tab, isSelected: true };
@@ -46,7 +49,13 @@ const CompTabs = () => {
       <div className="window" role="tabpanel">
         {data.map((content) => {
           if (content.isSelected) {
-            return <CompTabItem key={content.id} value={content.value} />;
+            return (
+              <CompTabItem
+                key={content.id}
+                value={content.value}
+                data={content.data}
+              />
+            );
           }
         })}
       </div>

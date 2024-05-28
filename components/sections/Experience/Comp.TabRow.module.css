@@ -3,11 +3,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   font-size: calc(0.3rem + 1vh);
   margin-bottom: 1rem;
+  align-items: center;
 }
 
 .DateDetails {
-  grid-column: 1 / span 1;
-  text-align: end;
+  grid-column: 1 / span 3;
+  text-align: start;
   padding: 0 1rem;
 }
 .YearDate {
@@ -22,10 +23,20 @@
 }
 
 .MoreDetails {
-  grid-column: 2 / span 3;
+  grid-column: 1 / span 3;
   border-left: 1px solid gray;
-  padding: 0 1rem;
 }
 .DetailsTitle {
   font-weight: 600;
+}
+
+@media screen and (min-width: 500px) {
+  .DateDetails {
+    grid-column: 1 / span 1;
+    text-align: end;
+  }
+  .MoreDetails {
+    grid-column: 2 / span 3;
+    padding: 0 1rem;
+  }
 }

@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import styles from "./Reusables.PopCard.module.css";
 
 interface ReusablesPopCardType {
-  title: String;
-  content: String;
+  title?: String;
+  content?: String;
 }
 
 const ReusablesPopCard = ({ title, content }: ReusablesPopCardType) => {
@@ -17,7 +17,7 @@ const ReusablesPopCard = ({ title, content }: ReusablesPopCardType) => {
     setShake(true);
     setTimeout(() => {
       setShake(false);
-    }, 250);
+    }, 300);
   };
 
   return (
