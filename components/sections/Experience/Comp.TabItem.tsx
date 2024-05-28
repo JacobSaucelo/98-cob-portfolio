@@ -26,6 +26,8 @@ const CompTabItem = ({ value }) => {
         <li>Lorem ipsum dolor sit amet.</li>
       </ul> */}
       <CompTabRow />
+      <CompTabRow />
+      <CompTabRow />
     </div>
   );
 };

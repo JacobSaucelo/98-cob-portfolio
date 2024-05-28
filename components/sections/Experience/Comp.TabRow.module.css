@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   font-size: calc(0.3rem + 1vh);
+  margin-bottom: 1rem;
 }
 
 .DateDetails {

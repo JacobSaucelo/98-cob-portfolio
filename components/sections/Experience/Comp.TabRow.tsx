@@ -38,3 +38,13 @@ const CompTabRow = () => {
 };
 
 export default CompTabRow;
+
+/*
+    if (ImageContainer) {
+        loop through
+        - flex wrap
+        - limit
+        - onlick (pop up)
+        - image popup(use the card)
+    } else  return
+*/
