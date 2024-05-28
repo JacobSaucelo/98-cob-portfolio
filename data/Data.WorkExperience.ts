@@ -78,9 +78,9 @@ export const DataWorkExperience: DataWorkExpTypes[] = [
     ],
   },
   {
-    year: "2023 - Present",
-    company: "Freelance",
-    position: "Freelance Web Developer",
+    year: "2024 - Present",
+    company: "ANALOG DEVICES (ADI) Gen Trias",
+    position: "Business Analyst",
     details: [
       {
         detailsTitle: "Small website projects",
@@ -106,7 +106,7 @@ export const DataEducation: DataWorkExpTypes[] = [
       },
       {
         detailsTitle: "Grade 12 - Honors",
-        desc: "Received with honors in Grade 12.",
+        desc: "Graudated with honors in Grade 12.",
       },
     ],
   },
@@ -121,7 +121,7 @@ export const DataEducation: DataWorkExpTypes[] = [
       },
       {
         detailsTitle: "Major in Web Application",
-        desc: "Picked web application as major elective.",
+        desc: "Picked 'Web App Development' as major elective.",
       },
       {
         detailsTitle: "Cisco Certifications",

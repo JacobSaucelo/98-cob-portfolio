@@ -1,0 +1,38 @@
+.SectionContactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.ContactImage {
+  grid-column: 1 / span 5;
+}
+.ContactDetails {
+  grid-column: 1 / span 5;
+
+  font-family: "Pixelated MS Sans Serif";
+}
+
+.ChatJacob {
+  color: blue;
+}
+
+.ContactInputSection {
+  display: flex;
+  margin: 0.5rem;
+  gap: 0.5rem;
+  align-items: center;
+}
+.ContactInputMessage {
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .ContactImage {
+    grid-column: 1 / span 2;
+  }
+  .ContactDetails {
+    grid-column: 3 / span 5;
+  }
+}
