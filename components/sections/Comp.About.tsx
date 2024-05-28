@@ -4,7 +4,7 @@ const CompAbout = () => {
   return (
     <div className="window">
       <div className="title-bar">
-        <div className="title-bar-text">A Window With A Status Bar</div>
+        <div className="title-bar-text">Skills - My Web Dev Stack</div>
       </div>
       <div className="window-body">
         <p> There are just so many possibilities:</p>
@@ -15,7 +15,7 @@ const CompAbout = () => {
         </ul>
       </div>
       <div className="status-bar">
-        <p className="status-bar-field">Press F1 for help</p>
+        <p className="status-bar-field">Press q for help</p>
         <p className="status-bar-field">Slide 1</p>
         <p className="status-bar-field">CPU Usage: 14%</p>
       </div>
