@@ -8,13 +8,13 @@ const SectionContact = () => {
     <section className={styles.SectionContactContainer}>
       <div className={`${styles.ContactImage} window`}>
         <div className="title-bar">
-          <div className="title-bar-text">A Window With A Status Bar</div>
+          <div className="title-bar-text">Penguin Dancing</div>
           <div className="title-bar-controls">
             <button aria-label="Maximize"></button>
           </div>
         </div>
-        <div className="window-body">
-          <Image src="/music1.gif" width={100} height={100} alt="music gif" />
+        <div className={`${styles.ContactImagePenguin} window-body`}>
+          {/* <Image src="/music1.gif" width={100} height={100} alt="music gif" /> */}
           <Image
             src="/clubpenguin.gif"
             width={100}
