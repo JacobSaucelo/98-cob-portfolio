@@ -12,7 +12,7 @@ const CompTechStack = () => {
       <table>
         <thead>
           <tr>
-            <th>Front End 🖥️</th>
+            <th>🖥️ Front End</th>
           </tr>
         </thead>
         <tbody>
@@ -26,7 +26,7 @@ const CompTechStack = () => {
       <table>
         <thead>
           <tr>
-            <th>Back End 🛠️</th>
+            <th>🛠️ Back End</th>
           </tr>
         </thead>
         <tbody>
@@ -40,7 +40,7 @@ const CompTechStack = () => {
       <table>
         <thead>
           <tr>
-            <th>Database 🗃️</th>
+            <th>🗃️ Database</th>
           </tr>
         </thead>
         <tbody>

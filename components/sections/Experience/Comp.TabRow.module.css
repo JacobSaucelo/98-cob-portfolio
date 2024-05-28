@@ -1,0 +1,30 @@
+.CompTabRowContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: calc(0.3rem + 1vh);
+}
+
+.DateDetails {
+  grid-column: 1 / span 1;
+  text-align: end;
+  padding: 0 1rem;
+}
+.YearDate {
+  color: gray;
+}
+.WorkTitle {
+  font-weight: 600;
+  font-size: calc(0.5rem + 1vh);
+}
+.CompanyName {
+  color: blue;
+}
+
+.MoreDetails {
+  grid-column: 2 / span 3;
+  border-left: 1px solid gray;
+  padding: 0 1rem;
+}
+.DetailsTitle {
+  font-weight: 600;
+}
