@@ -9,8 +9,8 @@ const CompAbout = () => {
       <div className="window-body">
         <p className={styles.AboutDetailsText}>
           I currently use VueJs & Asp.Net(Core/Non-Core) as my tech stack for my
-          current work but but im comfortable on exploring other frontend
-          libraries or frameworks based on what the project needs.
+          current work but im comfortable on exploring other frontend libraries
+          or frameworks based on what the project needs.
         </p>
         <ul>
           <li>Front End</li>

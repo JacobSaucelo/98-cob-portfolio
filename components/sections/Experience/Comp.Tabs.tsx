@@ -39,8 +39,7 @@ const CompTabs = () => {
             key={tab.id}
             onClick={() => handleSelected(tab.id)}
           >
-            <div style={{ padding: "0.3rem" }}>{tab.value}</div>
-            {/* <a href="#">{tab.value}</a> */}
+            <div className={styles.TabHeaderTitle}>{tab.value}</div>
           </li>
         ))}
       </menu>

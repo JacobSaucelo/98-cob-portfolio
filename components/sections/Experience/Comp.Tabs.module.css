@@ -1,3 +1,8 @@
 .TabsContainer {
   width: 100%;
 }
+
+.TabHeaderTitle {
+  padding: 0.3rem;
+  font-family: "Pixelated MS Sans Serif";
+}
