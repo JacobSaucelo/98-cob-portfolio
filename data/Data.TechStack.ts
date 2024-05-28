@@ -55,11 +55,11 @@ export const DataFrontEnd = [
     name: "TailwindCss logo",
     content: "TailwindCss",
   },
-  {
-    imgPath: "/logos/materialUi.png",
-    name: "MaterialUi logo",
-    content: "MaterialUi",
-  },
+  // {
+  //   imgPath: "/logos/materialUi.png",
+  //   name: "MaterialUi logo",
+  //   content: "MaterialUi",
+  // },
   {
     imgPath: "/logos/chakraUi.png",
     name: "ChakraUi logo",

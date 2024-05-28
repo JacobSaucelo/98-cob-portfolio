@@ -1,17 +1,29 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Section.Contact.module.css";
 import ReusablesPopCard from "@/components/reusables/Reusables.PopCard";
 
 const SectionContact = () => {
+  const [usage, setUsage] = useState<Number>(9);
+
+  useEffect(() => {
+    const interval = setInterval(
+      () => setUsage(Math.floor(Math.random() * 20 + 8)),
+      5000
+    );
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [usage]);
+
   return (
     <section className={styles.SectionContactContainer}>
       <div className={`${styles.ContactImage} window`}>
         <div className="title-bar">
           <div className="title-bar-text">Penguin Dancing</div>
-          <div className="title-bar-controls">
-            <button aria-label="Maximize"></button>
-          </div>
         </div>
         <div className={`${styles.ContactImagePenguin} window-body`}>
           {/* <Image src="/music1.gif" width={100} height={100} alt="music gif" /> */}
@@ -23,9 +35,9 @@ const SectionContact = () => {
           />
         </div>
         <div className="status-bar">
-          <p className="status-bar-field">Press w for help</p>
+          <p className="status-bar-field">Press F11 for fullscreen</p>
           <p className="status-bar-field">Slide 2</p>
-          <p className="status-bar-field">CPU Usage: 14%</p>
+          <p className="status-bar-field">CPU Usage: {usage}%</p>
         </div>
       </div>
 
@@ -81,9 +93,9 @@ const SectionContact = () => {
           </div>
           <article className={styles.ContactInputSection}>
             <select>
+              <option>Green</option>
               <option>Red</option>
               <option>Blue</option>
-              <option>Green</option>
               <option>Teal</option>
               <option>Black</option>
             </select>
@@ -109,22 +121,3 @@ const SectionContact = () => {
 };
 
 export default SectionContact;
-
-//   <aside>
-//     <h5>Contacts</h5>
-//     <p>Here are my links and socials if you wanna see more of my works.</p>
-//     {/* github */}
-//     <button>
-//       <div className="status-bar">
-//         <p className="status-bar-field">Github</p>
-//         <p className="status-bar-field">
-//           <Image
-//             height={12}
-//             width={12}
-//             src="/githubIcon.png"
-//             alt="github icon"
-//           />
-//         </p>
-//       </div>
-//     </button>
-//   </aside>

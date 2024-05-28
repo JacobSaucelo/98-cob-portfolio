@@ -1,6 +1,21 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import styles from "./Comp.About.module.css";
 const CompAbout = () => {
+  const [usage, setUsage] = useState<Number>(3);
+
+  useEffect(() => {
+    const interval = setInterval(
+      () => setUsage(Math.floor(Math.random() * 20 + 8)),
+      5000
+    );
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [usage]);
+
   return (
     <div className={`${styles.CompAboutContainer} window`}>
       <div className="title-bar">
@@ -19,9 +34,9 @@ const CompAbout = () => {
         </ul>
       </div>
       <div className="status-bar">
-        <p className="status-bar-field">Press q for help</p>
+        <p className="status-bar-field">Press F5 for refresh</p>
         <p className="status-bar-field">Slide 1</p>
-        <p className="status-bar-field">CPU Usage: 14%</p>
+        <p className="status-bar-field">CPU Usage: {usage}%</p>
       </div>
     </div>
   );
