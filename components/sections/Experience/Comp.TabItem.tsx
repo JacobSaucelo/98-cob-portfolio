@@ -3,7 +3,9 @@ import CompTabRow from "./Comp.TabRow";
 const CompTabItem = ({ value }) => {
   return (
     <div className="window-body">
-      <h3>{value}</h3>
+      <center>
+        <h3>{value}</h3>
+      </center>
       {/* <p>the tab content</p>
       <ul>
         <li>
