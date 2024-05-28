@@ -1,3 +1,11 @@
+.TechStackContainer {
+  /* width: 100%; */
+  height: 100% !important;
+  min-height: 150px;
+  display: flex;
+  align-items: start;
+  grid-column: 1 / span 2;
+}
 .TechStackItem {
   font-size: calc(0.5rem + 1vh);
   font-weight: 600;
@@ -5,4 +13,13 @@
 .TechStackLiHeader {
   font-weight: 600;
   color: blue;
+}
+.TechStackContainer table {
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .TechStackContainer {
+    grid-column: 2 / span 1;
+  }
 }

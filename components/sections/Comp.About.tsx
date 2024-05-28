@@ -1,8 +1,8 @@
 import React from "react";
-
+import styles from "./Comp.About.module.css";
 const CompAbout = () => {
   return (
-    <div className="window">
+    <div className={`${styles.CompAboutContainer} window`}>
       <div className="title-bar">
         <div className="title-bar-text">Skills - My Web Dev Stack</div>
       </div>
