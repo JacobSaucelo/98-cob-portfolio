@@ -3,7 +3,12 @@
 import React, { useState } from "react";
 import styles from "./Reusables.PopCard.module.css";
 
-const ReusablesPopCard = () => {
+interface ReusablesPopCardType {
+  title: String;
+  content: String;
+}
+
+const ReusablesPopCard = ({ title, content }: ReusablesPopCardType) => {
   const [toggle, setToggle] = useState<boolean>(true);
   const [shake, setShake] = useState<boolean>(false);
 
@@ -18,17 +23,18 @@ const ReusablesPopCard = () => {
   return (
     <section className={styles.PopCardContainer} onClick={handleShake}>
       <button onClick={handleToggle}>Toggle</button>
+
       {toggle && (
         <article className={styles.PopUpWindowContainer}>
           <div className={`${styles.PopUpWindow} window`}>
             <div className={`title-bar ${shake && "inactive"}`}>
-              <div className="title-bar-text">A Window With Stuff In It</div>
+              <div className="title-bar-text">{title || "Window Title"}</div>
               <div className="title-bar-controls">
                 <button aria-label="Close" onClick={handleToggle}></button>
               </div>
             </div>
             <div className="window-body">
-              <p>There&apos;s so much room for activities!</p>
+              <p>{content || "Window Content"}</p>
             </div>
           </div>
         </article>
