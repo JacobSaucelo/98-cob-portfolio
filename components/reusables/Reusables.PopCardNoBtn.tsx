@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "./Reusables.PopCardNoBtn.module.css";
 import { HooksUsage } from "@/hooks/Hooks.Usage";
+import Image from "next/image";
 
 interface ReusablesPopCardNoBtnType {
   containerTitle: String;
@@ -53,6 +54,13 @@ const ReusablesPopCardNoBtn = ({
                   </div>
                 </div>
                 <div className="window-body">
+                  <Image
+                    src={imgPath.toString()}
+                    height={100}
+                    width={100}
+                    alt={name.toString()}
+                    className={styles.PopCardImg}
+                  />
                   <p>There&apos;s so much room for activities!</p>
                 </div>
                 <div className="status-bar">
