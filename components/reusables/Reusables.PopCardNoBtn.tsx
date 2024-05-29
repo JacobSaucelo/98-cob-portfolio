@@ -5,11 +5,13 @@ import styles from "./Reusables.PopCardNoBtn.module.css";
 import { HooksUsage } from "@/hooks/Hooks.Usage";
 
 interface ReusablesPopCardNoBtnType {
+  containerTitle: String;
   content: String;
   imgPath: String;
   name: String;
 }
 const ReusablesPopCardNoBtn = ({
+  containerTitle,
   content,
   imgPath,
   name,
@@ -37,9 +39,7 @@ const ReusablesPopCardNoBtn = ({
                 }`}
               >
                 <div className="title-bar">
-                  <div className="title-bar-text">
-                    A Window With Stuff In It
-                  </div>
+                  <div className="title-bar-text">{containerTitle}</div>
                   <div className="title-bar-controls">
                     <button
                       aria-label="Minimize"
@@ -56,7 +56,7 @@ const ReusablesPopCardNoBtn = ({
                   <p>There&apos;s so much room for activities!</p>
                 </div>
                 <div className="status-bar">
-                  <p className="status-bar-field">{name}</p>
+                  <p className="status-bar-field">C:\Jacob\Tech Stack</p>
                   <p className="status-bar-field">{content}</p>
                   <p className="status-bar-field">
                     CPU Usage: {String(usage)}%

@@ -48,6 +48,7 @@ const CompTechStack = () => {
           {DataDatabases.map((stack) => (
             // <tr key={stack.name}>
             <ReusablesPopCardNoBtn
+              containerTitle="🗃️ Database"
               imgPath={stack.imgPath}
               name={stack.name}
               content={stack.content}
