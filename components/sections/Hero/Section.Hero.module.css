@@ -1,6 +1,8 @@
 .SectionHeroContainer {
   width: 100%;
+  margin-bottom: 1rem;
 }
+
 .SectionHeroContainerBody {
   display: flex;
   flex-direction: column;

@@ -9,12 +9,12 @@ import SectionHero from "@/components/sections/Hero/Section.Hero";
 export default function Home() {
   return (
     <main className={styles.HomePageContainer}>
-      {/* <EssentialsNavbar /> */}
+      <EssentialsNavbar />
       <SectionHero />
-      {/* <SectionTechStack />
+      <SectionTechStack />
       <SectionExperience />
       <SectionContact />
-      <EssentialsFooter /> */}
+      <EssentialsFooter />
     </main>
   );
 }

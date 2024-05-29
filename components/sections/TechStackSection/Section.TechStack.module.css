@@ -1,6 +1,6 @@
 .TechStackContainer {
   width: 100%;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
