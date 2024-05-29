@@ -47,7 +47,9 @@ const ReusablesPopCardNoBtn = ({
                 }`}
               >
                 <div className={`title-bar ${shake && "inactive"}`}>
-                  <div className="title-bar-text">{containerTitle}</div>
+                  <div className="title-bar-text">
+                    {containerTitle} - {content}
+                  </div>
                   <div className="title-bar-controls">
                     <button
                       aria-label="Minimize"

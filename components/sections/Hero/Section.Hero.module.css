@@ -57,6 +57,33 @@
 }
 
 /* POP UP SECTION */
+.HeroPopUpContainer {
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.HeroPopUpWindow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.WindowFullScreen {
+  height: 100vh;
+  max-height: 90vh;
+  width: 90vw;
+  max-width: none;
+}
+.HeroPopUpImage {
+  height: 200px;
+  width: 200px;
+}
 
 @media screen and (min-width: 500px) {
   .SectionHeroContainerBody {

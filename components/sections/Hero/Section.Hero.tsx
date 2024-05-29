@@ -1,19 +1,32 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./Section.Hero.module.css";
 import Image from "next/image";
 
 const SectionHero = () => {
+  const [toggle, setToggle] = useState<boolean>(false);
+  const [toggleFullscreen, setToggleFullscreen] = useState<boolean>(false);
+  const [shake, setShake] = useState<boolean>(false);
+
+  const handleToggle = () => setToggle(!toggle);
+  const handleToggleFullscreen = () => setToggleFullscreen(!toggleFullscreen);
+  const handleShake = () => {
+    setShake(true);
+    setTimeout(() => {
+      setShake(false);
+    }, 300);
+  };
+
   return (
-    <div role="tabpanel" className={`${styles.SectionHeroContainer} window`}>
+    <div className={`${styles.SectionHeroContainer} window`}>
       <div className={`${styles.SectionHeroContainerBody} window-body`}>
         <aside>
-          <div className={`${styles.SectionHeroWindow} window`}>
+          <div className={`${styles.SectionHeroWindow} window `}>
             <div className="title-bar">
               <div className="title-bar-text">User profile</div>
               <div className="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
-                <button aria-label="Close"></button>
+                <button aria-label="Maximize" onClick={handleToggle}></button>
               </div>
             </div>
             <div className={`${styles.SectionWindowBody} window-body`}>
@@ -39,21 +52,43 @@ const SectionHero = () => {
         </aside>
       </div>
 
-      <section>
-        <div className="window">
-          <div className="title-bar">
-            <div className="title-bar-text">A Window With Stuff In It</div>
-            <div className="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Maximize"></button>
-              <button aria-label="Close"></button>
+      {toggle && (
+        <section className={styles.HeroPopUpContainer} onClick={handleShake}>
+          <div
+            className={`${styles.HeroPopUpWindow} window ${
+              toggleFullscreen && styles.WindowFullScreen
+            }`}
+          >
+            <div className={`title-bar ${shake && "inactive"}`}>
+              <div className="title-bar-text">User profile</div>
+              <div className="title-bar-controls">
+                <button aria-label="Minimize" onClick={handleToggle}></button>
+                <button
+                  aria-label="Maximize"
+                  onClick={handleToggleFullscreen}
+                ></button>
+                <button aria-label="Close" onClick={handleToggle}></button>
+              </div>
+            </div>
+            <div className={`${styles.HeroPopUpBody} window-body`}>
+              <center>
+                <Image
+                  src="/logos/javascript.png"
+                  height={100}
+                  width={100}
+                  alt="User Image"
+                  className={styles.HeroPopUpImage}
+                />
+                <p>User.png</p>
+              </center>
+            </div>
+            <div className="status-bar">
+              <p className="status-bar-field">C:\User\Pictures</p>
+              <p className="status-bar-field">User.jpeg</p>
             </div>
           </div>
-          <div className="window-body">
-            <p>There&apos;s so much room for activities!</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   );
 };
