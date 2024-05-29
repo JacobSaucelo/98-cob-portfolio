@@ -56,8 +56,8 @@ const ReusablesPopCardNoBtn = ({
                 <div className="window-body">
                   <Image
                     src={imgPath.toString()}
-                    height={100}
-                    width={100}
+                    height={40}
+                    width={40}
                     alt={name.toString()}
                     className={styles.PopCardImg}
                   />

@@ -34,4 +34,6 @@
 
 .PopCardImg {
   image-rendering: pixelated;
+  height: 100px;
+  width: 100px;
 }

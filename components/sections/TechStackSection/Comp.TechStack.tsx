@@ -18,9 +18,13 @@ const CompTechStack = () => {
         </thead>
         <tbody>
           {DataFrontEnd.map((stack) => (
-            <tr key={stack.name}>
-              <td>{stack.content}</td>
-            </tr>
+            <ReusablesPopCardNoBtn
+              containerTitle="🖥️ Front End"
+              imgPath={stack.imgPath}
+              name={stack.name}
+              content={stack.content}
+              key={stack.name}
+            />
           ))}
         </tbody>
       </table>
@@ -32,9 +36,13 @@ const CompTechStack = () => {
         </thead>
         <tbody>
           {DataBackEnd.map((stack) => (
-            <tr key={stack.name}>
-              <td>{stack.content}</td>
-            </tr>
+            <ReusablesPopCardNoBtn
+              containerTitle="🛠️ Back End"
+              imgPath={stack.imgPath}
+              name={stack.name}
+              content={stack.content}
+              key={stack.name}
+            />
           ))}
         </tbody>
       </table>
@@ -46,7 +54,6 @@ const CompTechStack = () => {
         </thead>
         <tbody>
           {DataDatabases.map((stack) => (
-            // <tr key={stack.name}>
             <ReusablesPopCardNoBtn
               containerTitle="🗃️ Database"
               imgPath={stack.imgPath}
@@ -54,7 +61,6 @@ const CompTechStack = () => {
               content={stack.content}
               key={stack.name}
             />
-            // </tr>
           ))}
         </tbody>
       </table>
