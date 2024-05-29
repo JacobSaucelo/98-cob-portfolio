@@ -1,0 +1,38 @@
+.SectionHeroContainer {
+  width: 100%;
+}
+.SectionHeroContainerBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.SectionHeroWindow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 200px;
+  height: 200px;
+}
+
+.SectionWindowBody {
+  padding: none;
+  position: relative;
+  height: 100%;
+}
+
+.SectionHeroWindowImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+@media screen and (min-width: 500px) {
+  .SectionHeroContainerBody {
+    flex-direction: row;
+  }
+}
