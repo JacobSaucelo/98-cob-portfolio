@@ -10,7 +10,6 @@ const EssentialsNavbar = () => {
       </label>
       <aside className={styles.NavbarActions}>
         <ReusablesPopCardConstruction btnText="Works" title="Works" />
-        <button>Works</button>
         <button>
           <div className="status-bar">
             <p className="status-bar-field">Github</p>
