@@ -5,8 +5,14 @@ import styles from "./Reusables.PopCardNoBtn.module.css";
 
 interface ReusablesPopCardNoBtnType {
   content: String;
+  imgPath: String;
+  name: String;
 }
-const ReusablesPopCardNoBtn = ({ content }: ReusablesPopCardNoBtnType) => {
+const ReusablesPopCardNoBtn = ({
+  content,
+  imgPath,
+  name,
+}: ReusablesPopCardNoBtnType) => {
   const [toggle, setToggle] = useState<boolean>(false);
   const [toggleFullscreen, setToggleFullscreen] = useState<boolean>(false);
 
@@ -48,8 +54,8 @@ const ReusablesPopCardNoBtn = ({ content }: ReusablesPopCardNoBtnType) => {
                   <p>There&apos;s so much room for activities!</p>
                 </div>
                 <div className="status-bar">
-                  <p className="status-bar-field">Press F1 for help</p>
-                  <p className="status-bar-field">Slide 1</p>
+                  <p className="status-bar-field">{name}</p>
+                  <p className="status-bar-field">{content}</p>
                   <p className="status-bar-field">CPU Usage: 14%</p>
                 </div>
               </div>
