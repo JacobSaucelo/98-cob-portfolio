@@ -20,6 +20,13 @@ export default function Home() {
 }
 
 /*
+delorean
+https://sketchfab.com/3d-models/delorean-low-poly-14a40a54a3e245e7852fd4d22261a73a
+red:
+https://sketchfab.com/3d-models/low-poly-car-pixel-art-textures-lambo-style-5d865f075ac6466ebe8f7944b8c854b5
+threejs:
+https://threejs.org/examples/#webgl_postprocessing_pixel
+
 UserRequestApplicationModel.cs
 UserRequestPaginationModel.cs
 UserRequestResponseModel.cs

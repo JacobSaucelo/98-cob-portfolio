@@ -19,10 +19,17 @@ const ReusablesPopCardNoBtn = ({
 }: ReusablesPopCardNoBtnType) => {
   const [toggle, setToggle] = useState<boolean>(false);
   const [toggleFullscreen, setToggleFullscreen] = useState<boolean>(false);
+  const [shake, setShake] = useState<boolean>(false);
   const { usage } = HooksUsage();
 
   const handleToggle = () => setToggle(!toggle);
   const handleToggleFullscreen = () => setToggleFullscreen(!toggleFullscreen);
+  const handleShake = () => {
+    setShake(true);
+    setTimeout(() => {
+      setShake(false);
+    }, 300);
+  };
 
   return (
     <>
@@ -33,13 +40,13 @@ const ReusablesPopCardNoBtn = ({
           </p>
 
           {toggle && (
-            <div className={styles.PopCardNoBtnContainer}>
+            <div className={styles.PopCardNoBtnContainer} onClick={handleShake}>
               <div
                 className={`${styles.PopCardNoBtnWindow} window ${
                   toggleFullscreen && styles.WindowFullScreen
                 }`}
               >
-                <div className="title-bar">
+                <div className={`title-bar ${shake && "inactive"}`}>
                   <div className="title-bar-text">{containerTitle}</div>
                   <div className="title-bar-controls">
                     <button

@@ -24,23 +24,33 @@ const ReusablesPopCardConstruction = ({
 }: ReusablesPopCardConstructionType) => {
   const [toggle, setToggle] = useState<boolean>(false);
   const [toggleFullscreen, setToggleFullscreen] = useState<boolean>(false);
+  const [shake, setShake] = useState<boolean>(false);
   const { usage } = HooksUsage();
 
   const handleToggle = () => setToggle(!toggle);
   const handleToggleFullscreen = () => setToggleFullscreen(!toggleFullscreen);
+  const handleShake = () => {
+    setShake(true);
+    setTimeout(() => {
+      setShake(false);
+    }, 300);
+  };
 
   return (
     <>
       <button onClick={handleToggle}>{btnText}</button>
 
       {toggle && (
-        <section className={styles.ReusablesPopCardConstructionContainer}>
+        <section
+          className={styles.ReusablesPopCardConstructionContainer}
+          onClick={handleShake}
+        >
           <div
             className={`${styles.PopCardConstructionBtnWindow} window ${
               toggleFullscreen && styles.WindowFullScreen
             }`}
           >
-            <div className="title-bar">
+            <div className={`title-bar ${shake && "inactive"}`}>
               <div className="title-bar-text">{title}</div>
               <div className="title-bar-controls">
                 <button aria-label="Minimize" onClick={handleToggle}></button>
