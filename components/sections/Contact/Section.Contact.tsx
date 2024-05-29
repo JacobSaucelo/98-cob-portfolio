@@ -62,32 +62,36 @@ const SectionContact = () => {
               </li>
               <li>
                 <span className={styles.ChatJacob}>Jacob:</span>{" "}
-                <button>
-                  <div className="status-bar">
-                    <p className="status-bar-field">Github</p>
-                    <p className="status-bar-field">
-                      <Image
-                        height={12}
-                        width={12}
-                        src="/githubIcon.png"
-                        alt="github icon"
-                      />
-                    </p>
-                  </div>
-                </button>
-                <button>
-                  <div className="status-bar">
-                    <p className="status-bar-field">Linked In</p>
-                    <p className="status-bar-field">
-                      <Image
-                        height={12}
-                        width={12}
-                        src="/linkedInIcon.png"
-                        alt="LinkedIn icon"
-                      />
-                    </p>
-                  </div>
-                </button>
+                <a href="https://github.com/jacobsaucelo">
+                  <button>
+                    <div className="status-bar">
+                      <p className="status-bar-field">Github</p>
+                      <p className="status-bar-field">
+                        <Image
+                          height={12}
+                          width={12}
+                          src="/githubIcon.png"
+                          alt="github icon"
+                        />
+                      </p>
+                    </div>
+                  </button>
+                </a>
+                <a href="https://ph.linkedin.com/in/jacob-saucelo-594622286">
+                  <button>
+                    <div className="status-bar">
+                      <p className="status-bar-field">Linked In</p>
+                      <p className="status-bar-field">
+                        <Image
+                          height={12}
+                          width={12}
+                          src="/linkedInIcon.png"
+                          alt="LinkedIn icon"
+                        />
+                      </p>
+                    </div>
+                  </button>
+                </a>
               </li>
             </ul>
           </div>

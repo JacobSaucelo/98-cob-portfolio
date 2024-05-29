@@ -1,0 +1,5 @@
+.ReusablesPopCardConstructionContainer {
+  position: fixed;
+  background-color: red;
+  z-index: 100;
+}

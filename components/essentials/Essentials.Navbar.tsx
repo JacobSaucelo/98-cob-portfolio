@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./Essentials.Navbar.module.css";
+import ReusablesPopCardConstruction from "../reusables/Reusables.PopCardConstruction";
 
 const EssentialsNavbar = () => {
   return (
@@ -8,6 +9,7 @@ const EssentialsNavbar = () => {
         Header title
       </label>
       <aside className={styles.NavbarActions}>
+        <ReusablesPopCardConstruction btnText="Works" title="Works" />
         <button>Works</button>
         <button>
           <div className="status-bar">
