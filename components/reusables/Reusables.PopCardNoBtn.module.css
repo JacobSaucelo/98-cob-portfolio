@@ -23,6 +23,13 @@
   width: 100vw;
   max-width: none;
 }
+.PopCardWindowBody {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
 
 .PopupTableRow:hover {
   background-color: blue;
@@ -30,6 +37,7 @@
 }
 .PupupTableSpan {
   cursor: pointer;
+  margin: 0;
 }
 
 .PopCardImg {

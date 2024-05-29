@@ -28,9 +28,9 @@ const ReusablesPopCardNoBtn = ({
     <>
       <tr className={styles.PopupTableRow}>
         <td>
-          <span className={styles.PupupTableSpan} onClick={handleToggle}>
+          <p className={styles.PupupTableSpan} onClick={handleToggle}>
             {content || "content"}
-          </span>
+          </p>
 
           {toggle && (
             <div className={styles.PopCardNoBtnContainer}>
@@ -53,7 +53,7 @@ const ReusablesPopCardNoBtn = ({
                     <button aria-label="Close" onClick={handleToggle}></button>
                   </div>
                 </div>
-                <div className="window-body">
+                <div className={`${styles.PopCardWindowBody} window-body`}>
                   <Image
                     src={imgPath.toString()}
                     height={40}
@@ -61,7 +61,7 @@ const ReusablesPopCardNoBtn = ({
                     alt={name.toString()}
                     className={styles.PopCardImg}
                   />
-                  <p>There&apos;s so much room for activities!</p>
+                  <h3>{content}</h3>
                 </div>
                 <div className="status-bar">
                   <p className="status-bar-field">C:\Jacob\Tech Stack</p>
