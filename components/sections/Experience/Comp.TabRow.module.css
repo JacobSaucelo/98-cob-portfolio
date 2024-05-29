@@ -29,6 +29,13 @@
 .DetailsTitle {
   font-weight: 600;
 }
+.DetailsImages {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: blue;
+  cursor: pointer;
+}
 
 @media screen and (min-width: 500px) {
   .DateDetails {

@@ -46,7 +46,8 @@ const CompTabs = () => {
           </li>
         ))}
       </menu>
-      <div className="window" role="tabpanel">
+      {/* <div className="window" role="tabpanel"> */}
+      <div className="window">
         {data.map((content) => {
           if (content.isSelected) {
             return (

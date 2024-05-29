@@ -12,6 +12,8 @@ interface ReusablesPopCardConstructionType {
   imgPath: String;
   imgHeight: Number;
   imgWidth: Number;
+  status1?: String;
+  status2?: String;
 }
 
 const ReusablesPopCardConstruction = ({
@@ -21,6 +23,8 @@ const ReusablesPopCardConstruction = ({
   imgHeight,
   imgWidth,
   message,
+  status1,
+  status2,
 }: ReusablesPopCardConstructionType) => {
   const [toggle, setToggle] = useState<boolean>(false);
   const [toggleFullscreen, setToggleFullscreen] = useState<boolean>(false);
@@ -78,8 +82,10 @@ const ReusablesPopCardConstruction = ({
               </center>
             </div>
             <div className="status-bar">
-              <p className="status-bar-field">C:\User\Jacob</p>
-              <p className="status-bar-field">Works</p>
+              <p className="status-bar-field">
+                {status1 || "C:\\User\\Jacob"}{" "}
+              </p>
+              <p className="status-bar-field">{status2 || "Works"} </p>
               <p className="status-bar-field">CPU Usage: {String(usage)}%</p>
             </div>
           </div>
