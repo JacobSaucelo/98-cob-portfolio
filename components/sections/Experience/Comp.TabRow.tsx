@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Comp.TabRow.module.css";
 import { DataWorkExpTypes } from "@/data/Data.WorkExperience";
+import Image from "next/image";
 
 interface CompTabRowType {
   data: DataWorkExpTypes;
@@ -23,6 +24,24 @@ const CompTabRow = ({ data }: CompTabRowType) => {
               </summary>
               <ul>
                 <li>{details.desc}</li>
+                {details.imgPath && (
+                  <details open>
+                    <summary>Graduation photos</summary>
+                    <ul>
+                      {details.imgPath.map((images, index) => (
+                        <li key={index + images}>
+                          <Image
+                            src={images}
+                            height={20}
+                            width={20}
+                            alt={images}
+                          />
+                          {images}
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                )}
               </ul>
             </details>
           ))}
