@@ -36,7 +36,7 @@ export const DataFrontEnd = [
     content: "Reactjs",
   },
   {
-    imgPath: "/logos/reactjs.png",
+    imgPath: "/logos/vuejs.png",
     name: "Vuejs logo",
     content: "Vuejs",
   },
