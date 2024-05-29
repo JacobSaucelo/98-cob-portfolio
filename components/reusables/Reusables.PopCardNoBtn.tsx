@@ -70,6 +70,7 @@ const ReusablesPopCardNoBtn = ({
                       width={40}
                       alt={name.toString()}
                       className={styles.PopCardImg}
+                      draggable="false"
                     />
                     <center>
                       <p>{name}.png</p>

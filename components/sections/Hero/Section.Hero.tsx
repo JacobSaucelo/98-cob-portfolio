@@ -36,6 +36,7 @@ const SectionHero = () => {
                 width={50}
                 alt="User Image"
                 className={styles.SectionHeroWindowImage}
+                draggable="false"
               />
             </div>
             <div className="status-bar">
@@ -78,6 +79,7 @@ const SectionHero = () => {
                   width={100}
                   alt="User Image"
                   className={styles.HeroPopUpImage}
+                  draggable="false"
                 />
                 <p>User.png</p>
               </center>

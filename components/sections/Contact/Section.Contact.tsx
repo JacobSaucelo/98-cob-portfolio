@@ -32,12 +32,13 @@ const SectionContact = () => {
             width={100}
             height={100}
             alt="music gif"
+            draggable="false"
           />
         </div>
         <div className="status-bar">
           <p className="status-bar-field">Press F11 for fullscreen</p>
           <p className="status-bar-field">Slide 2</p>
-          <p className="status-bar-field">CPU Usage: {usage}%</p>
+          <p className="status-bar-field">CPU Usage: {String(usage)}%</p>
         </div>
       </div>
 
@@ -72,6 +73,7 @@ const SectionContact = () => {
                           width={12}
                           src="/githubIcon.png"
                           alt="github icon"
+                          draggable="false"
                         />
                       </p>
                     </div>
@@ -87,6 +89,7 @@ const SectionContact = () => {
                           width={12}
                           src="/linkedInIcon.png"
                           alt="LinkedIn icon"
+                          draggable="false"
                         />
                       </p>
                     </div>

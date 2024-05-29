@@ -39,6 +39,7 @@ const CompTabRow = ({ data }: CompTabRowType) => {
                             height={20}
                             width={20}
                             alt={images}
+                            draggable="false"
                           />
 
                           <ReusablesPopCardConstruction

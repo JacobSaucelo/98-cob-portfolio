@@ -74,6 +74,7 @@ const ReusablesPopCardConstruction = ({
                   height={Number(imgHeight)}
                   width={Number(imgWidth)}
                   alt={String(title)}
+                  draggable="false"
                 />
                 <p>
                   {message ||
