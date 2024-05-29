@@ -9,7 +9,7 @@ const SectionHero = () => {
         <aside>
           <div className={`${styles.SectionHeroWindow} window`}>
             <div className="title-bar">
-              <div className="title-bar-text">A Window With Stuff In It</div>
+              <div className="title-bar-text">User profile</div>
               <div className="title-bar-controls">
                 <button aria-label="Minimize"></button>
                 <button aria-label="Maximize"></button>
@@ -31,9 +31,11 @@ const SectionHero = () => {
             </div>
           </div>
         </aside>
-        <aside>
-          <h4>Lorem ipsum dolor sit.</h4>
-          <p>the tab content</p>
+        <aside className={styles.SectionHeroDetails}>
+          <p className={styles.SectionHeroDetailsHeader}>
+            Lorem ipsum dolor sit.
+          </p>
+          <p className={styles.SectionHeroDetailsSubTitle}>the tab content</p>
         </aside>
       </div>
     </div>
