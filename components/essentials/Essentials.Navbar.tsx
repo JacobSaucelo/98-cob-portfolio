@@ -9,21 +9,30 @@ const EssentialsNavbar = () => {
         Header title
       </label>
       <aside className={styles.NavbarActions}>
-        <ReusablesPopCardConstruction btnText="Works" title="Works" />
-        <button>
-          <div className="status-bar">
-            <p className="status-bar-field">Github</p>
-            <p className="status-bar-field">
-              <Image
-                height={12}
-                width={12}
-                src="/githubIcon.png"
-                alt="github icon"
-                priority
-              />
-            </p>
-          </div>
-        </button>
+        <ReusablesPopCardConstruction
+          btnText="Works"
+          title="Works"
+          message="Works is still under construction 😭"
+          imgPath="/construnction.gif"
+          imgHeight={100}
+          imgWidth={200}
+        />
+        <a href="https://github.com/jacobsaucelo">
+          <button>
+            <div className="status-bar">
+              <p className="status-bar-field">Github</p>
+              <p className="status-bar-field">
+                <Image
+                  height={12}
+                  width={12}
+                  src="/githubIcon.png"
+                  alt="github icon"
+                  priority
+                />
+              </p>
+            </div>
+          </button>
+        </a>
       </aside>
     </nav>
   );

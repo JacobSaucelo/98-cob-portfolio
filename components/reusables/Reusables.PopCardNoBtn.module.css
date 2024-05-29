@@ -16,10 +16,14 @@
   width: 100%;
   max-width: 400px;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .WindowFullScreen {
   height: 100vh;
+  max-height: 90vh;
   width: 90vw;
   max-width: none;
 }

@@ -54,17 +54,22 @@ const ReusablesPopCardNoBtn = ({
                   </div>
                 </div>
                 <div className={`${styles.PopCardWindowBody} window-body`}>
-                  <Image
-                    src={imgPath.toString()}
-                    height={40}
-                    width={40}
-                    alt={name.toString()}
-                    className={styles.PopCardImg}
-                  />
+                  <aside>
+                    <Image
+                      src={imgPath.toString()}
+                      height={40}
+                      width={40}
+                      alt={name.toString()}
+                      className={styles.PopCardImg}
+                    />
+                    <center>
+                      <p>{name}.png</p>
+                    </center>
+                  </aside>
                   <h3>{content}</h3>
                 </div>
                 <div className="status-bar">
-                  <p className="status-bar-field">C:\Jacob\Tech Stack</p>
+                  <p className="status-bar-field">C:\User\Jacob\Tech Stack</p>
                   <p className="status-bar-field">{content}</p>
                   <p className="status-bar-field">
                     CPU Usage: {String(usage)}%

@@ -1,6 +1,6 @@
 .ReusablesPopCardConstructionContainer {
   position: fixed;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   height: 100vh;
   width: 100vw;
@@ -11,13 +11,16 @@
   justify-content: center;
 }
 
-.PopCardNoBtnWindow {
+.PopCardConstructionBtnWindow {
   color: black;
   width: 100%;
   max-width: 400px;
   margin: 1rem;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 .WindowFullScreen {
   height: 100vh;
   width: 90vw;
