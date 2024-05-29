@@ -4,6 +4,8 @@ import {
   DataDatabases,
 } from "@/data/Data.TechStack";
 import styles from "./Comp.TechStack.module.css";
+import Image from "next/image";
+import ReusablesPopCardNoBtn from "@/components/reusables/Reusables.PopCardNoBtn";
 
 const CompTechStack = () => {
   return (
@@ -44,9 +46,9 @@ const CompTechStack = () => {
         </thead>
         <tbody>
           {DataDatabases.map((stack) => (
-            <tr key={stack.name}>
-              <td>{stack.content}</td>
-            </tr>
+            // <tr key={stack.name}>
+            <ReusablesPopCardNoBtn content={stack.content} key={stack.name} />
+            // </tr>
           ))}
         </tbody>
       </table>

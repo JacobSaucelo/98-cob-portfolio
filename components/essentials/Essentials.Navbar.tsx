@@ -18,6 +18,7 @@ const EssentialsNavbar = () => {
                 width={12}
                 src="/githubIcon.png"
                 alt="github icon"
+                priority
               />
             </p>
           </div>

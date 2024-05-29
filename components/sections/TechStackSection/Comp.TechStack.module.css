@@ -18,10 +18,6 @@
 .TechStackContainer table {
   width: 100%;
 }
-.TechStackContainer tr:hover {
-  background-color: blue;
-  color: white;
-}
 
 @media screen and (min-width: 500px) {
   .TechStackContainer {

@@ -1,0 +1,29 @@
+.PopCardNoBtnContainer {
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PopCardNoBtnWindow {
+  color: black;
+}
+
+.WindowFullScreen {
+  height: 100vh;
+  width: 100vw;
+}
+
+.PopupTableRow:hover {
+  background-color: blue;
+  color: white;
+}
+.PupupTableSpan {
+  cursor: pointer;
+}
