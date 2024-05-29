@@ -29,6 +29,8 @@
 }
 .SectionHeroDetailsSubTitle {
   color: white;
+  margin: 0.5rem 0;
+  font-size: calc(0.5rem + 1vh);
 }
 
 .SectionHeroWindow {
@@ -57,5 +59,16 @@
 @media screen and (min-width: 500px) {
   .SectionHeroContainerBody {
     flex-direction: row;
+  }
+  .SectionHeroDetails {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .SectionHeroDetailsHeader {
+    text-align: start;
+    font-size: calc(1.3rem + 1vh);
+  }
+  .SectionHeroDetailsSubTitle {
+    font-size: calc(1rem + 1vh);
   }
 }
