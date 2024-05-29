@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "./Reusables.PopCardNoBtn.module.css";
+import { HooksUsage } from "@/hooks/Hooks.Usage";
 
 interface ReusablesPopCardNoBtnType {
   content: String;
@@ -15,6 +16,7 @@ const ReusablesPopCardNoBtn = ({
 }: ReusablesPopCardNoBtnType) => {
   const [toggle, setToggle] = useState<boolean>(false);
   const [toggleFullscreen, setToggleFullscreen] = useState<boolean>(false);
+  const { usage } = HooksUsage();
 
   const handleToggle = () => setToggle(!toggle);
   const handleToggleFullscreen = () => setToggleFullscreen(!toggleFullscreen);
@@ -56,7 +58,9 @@ const ReusablesPopCardNoBtn = ({
                 <div className="status-bar">
                   <p className="status-bar-field">{name}</p>
                   <p className="status-bar-field">{content}</p>
-                  <p className="status-bar-field">CPU Usage: 14%</p>
+                  <p className="status-bar-field">
+                    CPU Usage: {String(usage)}%
+                  </p>
                 </div>
               </div>
             </div>
