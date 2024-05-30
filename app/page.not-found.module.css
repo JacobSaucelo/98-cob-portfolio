@@ -1,0 +1,9 @@
+.PageNotFoundContainer {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  flex-direction: column;
+}

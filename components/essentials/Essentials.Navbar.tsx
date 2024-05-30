@@ -6,7 +6,7 @@ const EssentialsNavbar = () => {
   return (
     <nav className={styles.NavbarContainer}>
       <label htmlFor="headerTitle" className={styles.HeaderTitle}>
-        Header title
+        Home
       </label>
       <aside className={styles.NavbarActions}>
         <ReusablesPopCardConstruction
