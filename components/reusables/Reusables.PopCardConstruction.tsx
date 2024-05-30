@@ -75,6 +75,9 @@ const ReusablesPopCardConstruction = ({
                   width={Number(imgWidth)}
                   alt={String(title)}
                   draggable="false"
+                  className={
+                    toggleFullscreen ? styles.WindowImageFullscreen : ""
+                  }
                 />
                 <p>
                   {message ||

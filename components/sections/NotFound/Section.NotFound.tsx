@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styles from "./Section.NotFound.module.css";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const SectionNotFound = () => {
   const [imageSelected, setImageSelected] = useState<String>("");
@@ -88,9 +89,13 @@ const SectionNotFound = () => {
             <div className={styles.WindowBodyButtons}>
               <aside>
                 <button disabled>Finish</button>
-                <button>Home</button>
+                <Link href="/">
+                  <button>Home</button>
+                </Link>
               </aside>
-              <button>Cancel</button>
+              <Link href="/">
+                <button>Cancel</button>
+              </Link>
             </div>
           </aside>
         </div>
