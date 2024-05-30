@@ -1,8 +1,54 @@
 .SectionNotFoundContainer {
-  border: 1px solid red;
   min-height: 80vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.SectionWindow {
+  width: 100%;
+  max-width: 500px;
+}
+
+.WindowTitleBar {
+  background: navy;
+}
+.WindowBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-height: 260px;
+}
+
+.WindowBodyImageContainer {
+  border: 1.5px solid black;
+  width: 100%;
+  min-height: 100px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.WindowBodyImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  image-rendering: pixelated;
+}
+
+@media screen and (min-width: 500px) {
+  .WindowBody {
+    flex-direction: row;
+  }
+  .WindowBodyImageContainer {
+    max-width: 120px;
+    min-height: 260px;
+  }
+  .WindowBodyImage {
+    object-position: top center;
+    image-rendering: auto;
+  }
 }
