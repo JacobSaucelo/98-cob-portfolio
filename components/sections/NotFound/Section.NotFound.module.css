@@ -39,9 +39,25 @@
   image-rendering: pixelated;
 }
 
+.WindowBodyDetails {
+  width: 100%;
+}
+.WindowBodyHeader1 {
+  font-size: calc(0.7rem + 1vh);
+  font-weight: 600;
+  color: navy;
+  margin: 0;
+}
+.WindowBodyHeader2 {
+  font-size: calc(1rem + 1vh);
+  font-weight: 600;
+  margin: 0;
+}
+
 @media screen and (min-width: 500px) {
   .WindowBody {
     flex-direction: row;
+    align-items: flex-start;
   }
   .WindowBodyImageContainer {
     max-width: 120px;
@@ -50,5 +66,8 @@
   .WindowBodyImage {
     object-position: top center;
     image-rendering: auto;
+  }
+  .WindowBodyDetails {
+    padding: 1rem;
   }
 }

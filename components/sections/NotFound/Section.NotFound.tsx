@@ -8,7 +8,7 @@ const SectionNotFound = () => {
       <div className={`${styles.SectionWindow} window`}>
         <div className={`${styles.WindowTitleBar} title-bar`}>
           {/* style={{ backgroundColor: "rgba(0,0,168,1) !important" }} */}
-          <div className="title-bar-text">Page Not Found</div>
+          <div className="title-bar-text">Error 404 - Page Not Found...</div>
           <div className="title-bar-controls"></div>
         </div>
         <div className={`${styles.WindowBody} window-body`}>
@@ -21,9 +21,17 @@ const SectionNotFound = () => {
               className={styles.WindowBodyImage}
             />
           </aside>
-          <aside>
-            <p>Page Not Found : (</p>
-            <p>There&apos;s so much room for activities!</p>
+          <aside className={styles.WindowBodyDetails}>
+            <p className={styles.WindowBodyHeader1}>Error - 404</p>
+            <p className={styles.WindowBodyHeader2}>Page Not Found... </p>
+            {/* <p className={styles.WindowBodyHeader}>Page Not Found :(</p> */}
+            <p>The page </p>
+            <hr />
+            <div>
+              <button disabled>{"<"} Back</button>
+              <button>Next {">"}</button>
+              <button>Cancel</button>
+            </div>
           </aside>
         </div>
       </div>
