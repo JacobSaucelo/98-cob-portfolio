@@ -6,12 +6,24 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const SectionNotFound = () => {
-  const [imageSelected, SetImageSelected] = useState<String>("");
+  const [imageSelected, setImageSelected] = useState<String>("");
   const currentPathName = usePathname();
 
   //   OO any kase tamad ako lol
   const handleImageSelect = (e: any) => {
-    console.log("e:", e.target.value);
+    setImageSelected(e.target.value);
+  };
+
+  const handleRenderImage = (imgPath: String) => {
+    switch (imgPath) {
+      case value:
+        break;
+
+      default:
+        break;
+    }
+
+    return String("ASdf");
   };
 
   return (
@@ -24,6 +36,7 @@ const SectionNotFound = () => {
         </div>
         <div className={`${styles.WindowBody} window-body`}>
           <aside className={styles.WindowBodyImageContainer}>
+            {handleRenderImage(imageSelected)}
             <Image
               src="/assets/notFoundBannerFixed.png"
               height={260}
