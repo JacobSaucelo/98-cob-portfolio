@@ -55,6 +55,19 @@
   font-weight: 600;
   margin: 0;
 }
+.WindowBodyPathTexts {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0 0;
+}
+.WindowBodyPathName {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  gap: 0.5rem;
+  margin: 0;
+}
 .WindowBodyButtons {
   display: flex;
   justify-content: flex-end;
@@ -78,5 +91,8 @@
   }
   .WindowBodyDetails {
     padding: 1rem;
+  }
+  .WindowBodyPathName {
+    max-width: 230px;
   }
 }

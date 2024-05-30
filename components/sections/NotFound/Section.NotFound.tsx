@@ -3,12 +3,12 @@
 import React from "react";
 import styles from "./Section.NotFound.module.css";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const SectionNotFound = () => {
-  const param = useParams();
+  const currentPathName = usePathname();
 
-  console.log("param: ", param);
+  console.log("currentPathName: ", currentPathName);
   return (
     <section className={styles.SectionNotFoundContainer}>
       <div className={`${styles.SectionWindow} window`}>
@@ -31,7 +31,12 @@ const SectionNotFound = () => {
             <div className={styles.WindowBodyTexts}>
               <p className={styles.WindowBodyHeader1}>Error - 404</p>
               <p className={styles.WindowBodyHeader2}>Page Not Found... </p>
-              <p>C:\Pages\ is not accessible </p>
+              <div className={styles.WindowBodyPathTexts}>
+                <p className={styles.WindowBodyPathName}>
+                  C:/Pages{currentPathName}
+                </p>{" "}
+                is not accessible{" "}
+              </div>
               <p>The file or directory is corrupted and unreadable </p>
               <fieldset>
                 <legend>Select a directory</legend>
