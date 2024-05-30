@@ -1,8 +1,14 @@
+"use client";
+
 import React from "react";
 import styles from "./Section.NotFound.module.css";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 
 const SectionNotFound = () => {
+  const param = useParams();
+
+  console.log("param: ", param);
   return (
     <section className={styles.SectionNotFoundContainer}>
       <div className={`${styles.SectionWindow} window`}>
@@ -22,14 +28,33 @@ const SectionNotFound = () => {
             />
           </aside>
           <aside className={styles.WindowBodyDetails}>
-            <p className={styles.WindowBodyHeader1}>Error - 404</p>
-            <p className={styles.WindowBodyHeader2}>Page Not Found... </p>
-            {/* <p className={styles.WindowBodyHeader}>Page Not Found :(</p> */}
-            <p>The page </p>
+            <div className={styles.WindowBodyTexts}>
+              <p className={styles.WindowBodyHeader1}>Error - 404</p>
+              <p className={styles.WindowBodyHeader2}>Page Not Found... </p>
+              <p>C:\Pages\ is not accessible </p>
+              <p>The file or directory is corrupted and unreadable </p>
+              <fieldset>
+                <legend>Select a directory</legend>
+                <div className="field-row">
+                  <input id="radio13" type="radio" name="fieldset-example2" />
+                  <label htmlFor="radio13">C:\\JACOB.000</label>
+                </div>
+                <div className="field-row">
+                  <input id="radio14" type="radio" name="fieldset-example2" />
+                  <label htmlFor="radio14">C:\\Cat.000</label>
+                </div>
+                <div className="field-row">
+                  <input id="radio16" type="radio" name="fieldset-example2" />
+                  <label htmlFor="radio16">Other directory</label>
+                </div>
+              </fieldset>
+            </div>
             <hr />
-            <div>
-              <button disabled>{"<"} Back</button>
-              <button>Next {">"}</button>
+            <div className={styles.WindowBodyButtons}>
+              <aside>
+                <button disabled>Finish</button>
+                <button>Home</button>
+              </aside>
               <button>Cancel</button>
             </div>
           </aside>
