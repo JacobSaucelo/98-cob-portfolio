@@ -14,36 +14,33 @@ const SectionNotFound = () => {
     setImageSelected(e.target.value);
   };
 
-  const handleRenderImage = (imgPath: String) => {
-    switch (imgPath) {
-      case value:
-        break;
-
-      default:
-        break;
-    }
-
-    return String("ASdf");
-  };
-
   return (
     <section className={styles.SectionNotFoundContainer}>
       <div className={`${styles.SectionWindow} window`}>
         <div className={`${styles.WindowTitleBar} title-bar`}>
-          {/* style={{ backgroundColor: "rgba(0,0,168,1) !important" }} */}
           <div className="title-bar-text">Error 404 - Page Not Found...</div>
           <div className="title-bar-controls"></div>
         </div>
         <div className={`${styles.WindowBody} window-body`}>
           <aside className={styles.WindowBodyImageContainer}>
-            {handleRenderImage(imageSelected)}
-            <Image
-              src="/assets/notFoundBannerFixed.png"
-              height={260}
-              width={120}
-              alt="Page not found"
-              className={styles.WindowBodyImage}
-            />
+            {imageSelected === "C:\\Cat.000" ? (
+              <Image
+                src="/assets/notFound.jpg"
+                height={260}
+                width={120}
+                alt="Page not found"
+                className={styles.WindowBodyImage}
+              />
+            ) : (
+              <Image
+                src="/assets/notFoundBannerFixed.png"
+                height={260}
+                width={120}
+                alt="Page not found"
+                className={styles.WindowBodyImage}
+                priority
+              />
+            )}
           </aside>
           <aside className={styles.WindowBodyDetails}>
             <div className={styles.WindowBodyTexts}>
@@ -72,7 +69,7 @@ const SectionNotFound = () => {
                     id="radio14"
                     type="radio"
                     name="fieldset-example2"
-                    value="C:\\Cat.000"
+                    value={String("C:\\Cat.000")}
                   />
                   <label htmlFor="radio14">C:\\Cat.000</label>
                 </div>
