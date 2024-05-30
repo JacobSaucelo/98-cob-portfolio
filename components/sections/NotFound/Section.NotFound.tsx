@@ -1,14 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Section.NotFound.module.css";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const SectionNotFound = () => {
+  const [imageSelected, SetImageSelected] = useState<String>("");
   const currentPathName = usePathname();
 
-  console.log("currentPathName: ", currentPathName);
+  //   OO any kase tamad ako lol
+  const handleImageSelect = (e: any) => {
+    console.log("e:", e.target.value);
+  };
+
   return (
     <section className={styles.SectionNotFoundContainer}>
       <div className={`${styles.SectionWindow} window`}>
@@ -38,18 +43,33 @@ const SectionNotFound = () => {
                 is not accessible{" "}
               </div>
               <p>The file or directory is corrupted and unreadable </p>
-              <fieldset>
+              <fieldset onChange={(e) => handleImageSelect(e)}>
                 <legend>Select a directory</legend>
                 <div className="field-row">
-                  <input id="radio13" type="radio" name="fieldset-example2" />
+                  <input
+                    id="radio13"
+                    type="radio"
+                    name="fieldset-example2"
+                    value="C:\\JACOB.000"
+                  />
                   <label htmlFor="radio13">C:\\JACOB.000</label>
                 </div>
                 <div className="field-row">
-                  <input id="radio14" type="radio" name="fieldset-example2" />
+                  <input
+                    id="radio14"
+                    type="radio"
+                    name="fieldset-example2"
+                    value="C:\\Cat.000"
+                  />
                   <label htmlFor="radio14">C:\\Cat.000</label>
                 </div>
                 <div className="field-row">
-                  <input id="radio16" type="radio" name="fieldset-example2" />
+                  <input
+                    id="radio16"
+                    type="radio"
+                    name="fieldset-example2"
+                    value="other"
+                  />
                   <label htmlFor="radio16">Other directory</label>
                 </div>
               </fieldset>
