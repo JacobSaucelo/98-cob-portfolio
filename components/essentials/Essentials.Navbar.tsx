@@ -4,7 +4,7 @@ import ReusablesPopCardConstruction from "../reusables/Reusables.PopCardConstruc
 
 const EssentialsNavbar = () => {
   return (
-    <nav className={styles.NavbarContainer}>
+    <nav className={`${styles.NavbarContainer} window-body`}>
       <label htmlFor="headerTitle" className={styles.HeaderTitle}>
         Home
       </label>

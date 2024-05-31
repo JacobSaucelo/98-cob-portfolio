@@ -57,7 +57,7 @@ const SectionCube = () => {
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
-    camera.position.z = 2;
+    camera.position.z = 1.7;
 
     function animate() {
       requestAnimationFrame(animate);
