@@ -78,6 +78,7 @@ const ReusablesPopCardConstruction = ({
                   className={
                     toggleFullscreen ? styles.WindowImageFullscreen : ""
                   }
+                  unoptimized
                 />
                 <p>
                   {message ||

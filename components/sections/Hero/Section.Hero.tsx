@@ -41,15 +41,15 @@ const SectionHero = () => {
             </div>
             <div className="status-bar">
               <p className="status-bar-field">C:\User\Pictures</p>
-              <p className="status-bar-field">User.jpeg</p>
+              <p className="status-bar-field">Jacob.jpeg</p>
             </div>
           </div>
         </aside>
         <aside className={styles.SectionHeroDetails}>
-          <p className={styles.SectionHeroDetailsHeader}>
-            Lorem ipsum dolor sit.
+          <p className={styles.SectionHeroDetailsHeader}>Jacob Saucelo</p>
+          <p className={styles.SectionHeroDetailsSubTitle}>
+            Full Stack Web Developer
           </p>
-          <p className={styles.SectionHeroDetailsSubTitle}>the tab content</p>
         </aside>
       </div>
 
