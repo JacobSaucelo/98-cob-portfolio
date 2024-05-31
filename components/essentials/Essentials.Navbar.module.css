@@ -5,11 +5,14 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+  background: linear-gradient(90deg, navy, #1084d0);
 }
 
 .HeaderTitle {
   font-size: calc(0.6rem + 1vh);
   font-weight: 600;
+  color: white;
+  padding: 1rem 0;
 }
 
 .NavbarActions {
