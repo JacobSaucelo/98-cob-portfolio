@@ -5,11 +5,13 @@ import SectionExperience from "@/components/sections/Experience/Section.Experien
 import EssentialsFooter from "@/components/essentials/Essentials.Footer";
 import SectionContact from "@/components/sections/Contact/Section.Contact";
 import SectionHero from "@/components/sections/Hero/Section.Hero";
+import SectionCube from "@/components/sections/Cube/Section.Cube";
 
 export default function Home() {
   return (
     <main className={styles.HomePageContainer}>
       <EssentialsNavbar />
+      <SectionCube />
       <SectionHero />
       <SectionTechStack />
       <SectionExperience />
