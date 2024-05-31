@@ -94,13 +94,13 @@ const SectionCube = () => {
   return (
     <section
       style={{
-        border: "1px solid red",
+        // border: "1px solid red",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
-      <div ref={refContainer} style={{ border: "1px solid red" }}></div>
+      <div ref={refContainer}></div>
     </section>
   );
 };
